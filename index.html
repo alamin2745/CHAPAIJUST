@@ -1,45 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Photo Example</title>
-    <style>
-      body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: #f4f4f4;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-      }
-      .card {
-        background: white;
-        border-radius: 12px;
-        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        padding: 20px;
-        width: 90%;
-        max-width: 700px;
-        text-align: center;
-      }
-      img {
-        width: 100%;
-        max-height: 500px;
-        object-fit: cover;
-        border-radius: 10px;
-        margin-bottom: 16px;
-      }
-      h1 {
-        color: #333;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=1200&q=80" alt="Sample photo" />
-      <h1>My Photo</h1>
-      <p>This page shows how to add a photo to an HTML file.</p>
-    </div>
-  </body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#10291f">
+<meta name="description" content="Chapai Nawabganj Student Association of JUST — celebrating our district, heritage, culture, mangoes and community.">
+<title>Chapai Nawabganj Student Association | JUST</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+<style>
+:root{--forest:#10291f;--forest2:#193c2c;--forest3:#315b3e;--gold:#e9bd59;--gold2:#b5852f;--cream:#fbfaf5;--paper:#f0f0e7;--ink:#20372b;--muted:#6e7b72;--line:#e3e6dc;--white:#fff;--shadow:0 20px 55px rgba(16,41,31,.14)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:82px}
+body{font-family:"DM Sans",sans-serif;background:var(--cream);color:var(--ink);line-height:1.65;overflow-x:hidden}
+img{display:block;width:100%;height:100%;object-fit:cover}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.container{width:min(1180px,calc(100% - 44px));margin:auto}
+.site-header{position:fixed;inset:0 0 auto;z-index:100;background:rgba(13,39,28,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.12);color:white}
+.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;min-width:0}
+.brand-mark{height:44px;width:44px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-family:"Playfair Display",serif;font-size:18px}
+.brand-name{font-size:12px;font-weight:800;letter-spacing:.1em;line-height:1.35}
+.brand-sub{display:block;margin-top:4px;color:var(--gold);font-size:9px;letter-spacing:.18em}
+.nav-links{display:flex;align-items:center;gap:25px;list-style:none}
+.nav-links a{font-size:12px;color:rgba(255,255,255,.8);transition:.2s}
+.nav-links a:hover{color:var(--gold)}
+.nav-cta,.btn-gold{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--gold);color:var(--forest);font-weight:800;font-size:12px;padding:13px 21px;border-radius:99px;transition:.25s}
+.nav-cta:hover,.btn-gold:hover{background:#f6d98f;transform:translateY(-2px)}
+.menu-btn{display:none;background:none;border:0;color:white;font-size:26px;cursor:pointer}
+.hero{min-height:780px;padding:155px 0 90px;position:relative;isolation:isolate;color:white;background:linear-gradient(100deg,rgba(7,27,18,.93),rgba(9,32,22,.68) 55%,rgba(8,28,20,.38)),url("https://upload.wikimedia.org/wikipedia/commons/9/9b/Pathway_of_Mahananda_River.jpg") center/cover}
+.hero:after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at 80% 20%,rgba(233,189,89,.2),transparent 32%),linear-gradient(0deg,rgba(9,31,21,.5),transparent 55%)}
+.hero-grid{display:grid;grid-template-columns:1.06fr .94fr;align-items:center;gap:50px}
+.kicker{display:flex;align-items:center;gap:12px;color:var(--gold);font-size:10px;font-weight:800;letter-spacing:.25em;text-transform:uppercase}
+.kicker:before{content:"";height:1px;width:34px;background:var(--gold)}
+h1{font-size:clamp(48px,6.1vw,78px);line-height:1.05;letter-spacing:-.045em;font-weight:700;margin:24px 0}
+.serif{font-family:"Playfair Display",serif;font-style:italic;font-weight:500;color:var(--gold)}
+.hero-copy{max-width:580px;color:rgba(255,255,255,.78);font-size:15px;line-height:1.95}
+.hero-actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:32px}
+.btn-ghost{display:inline-flex;align-items:center;justify-content:center;padding:12px 21px;border:1px solid rgba(255,255,255,.48);border-radius:99px;color:white;font-size:12px;transition:.2s}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+.hero-note{margin-top:45px;color:rgba(255,255,255,.6);font-size:11px}
+.hero-note span{color:var(--gold)}
+.hero-feature{position:relative;min-height:465px;display:flex;align-items:flex-end;justify-content:center}
+.hero-photo{position:absolute;inset:0 4% 0 10%;overflow:hidden;border-radius:220px 220px 18px 18px;border:1px solid rgba(233,189,89,.55);box-shadow:0 25px 80px rgba(0,0,0,.3)}
+.hero-photo img{filter:brightness(.72);transition:transform 8s ease}
+.hero-photo:hover img{transform:scale(1.08)}
+.hero-feature-label{position:relative;z-index:2;text-align:center;margin-bottom:48px;text-shadow:0 3px 20px #000}
+.hero-feature-label strong{display:block;font-family:"Playfair Display",serif;font-size:34px;font-weight:500}
+.hero-feature-label span{display:block;margin-top:8px;color:#ffe4a4;font-size:9px;letter-spacing:.25em}
+.hero-stamp{position:absolute;z-index:3;left:0;bottom:24px;padding:16px 20px;background:var(--forest2);border:1px solid rgba(233,189,89,.45);border-radius:14px;box-shadow:var(--shadow)}
+.hero-stamp b{display:block;color:var(--gold);font-family:"Playfair Display",serif;font-size:20px;font-weight:500}
+.hero-stamp small{font-size:10px;color:rgba(255,255,255,.68)}
+.section{padding:105px 0}
+.section-paper{background:var(--paper)}
+.section-head{max-width:760px;margin:0 auto 48px;text-align:center}
+.label{color:var(--gold2);font-size:10px;font-weight:800;letter-spacing:.25em;text-transform:uppercase}
+h2{font-size:clamp(34px,4.5vw,53px);line-height:1.15;letter-spacing:-.035em;margin-top:15px}
+.section-intro{max-width:720px;margin:18px auto 0;color:var(--muted);font-size:14px;line-height:1.95}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}
+.body-copy{color:var(--muted);font-size:14px;line-height:2}
+.fact-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}
+.fact{padding:18px;background:white;border:1px solid var(--line);border-radius:13px}
+.fact b{display:block;font-family:"Playfair Display",serif;color:var(--gold2);font-size:25px}
+.fact span{font-size:10px;color:var(--muted)}
+.photo-frame{height:430px;overflow:hidden;border-radius:18px;box-shadow:var(--shadow);position:relative}
+.photo-frame img{transition:transform .8s}
+.photo-frame:hover img{transform:scale(1.06)}
+.photo-caption{position:absolute;bottom:0;left:0;right:0;padding:40px 22px 20px;color:white;background:linear-gradient(transparent,rgba(0,0,0,.7));font-family:"Playfair Display",serif;font-size:22px}
+.story-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:45px}
+.story-card{background:white;border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:transform .3s,box-shadow .3s}
+.story-card:hover{transform:translateY(-7px);box-shadow:var(--shadow)}
+.story-image{height:215px;overflow:hidden}
+.story-image img{transition:transform .7s}
+.story-card:hover .story-image img{transform:scale(1.07)}
+.story-content{padding:24px}
+.story-content small{font-size:9px;color:var(--gold2);font-weight:800;letter-spacing:.18em;text-transform:uppercase}
+.story-content h3{font-family:"Playfair Display",serif;font-size:23px;font-weight:600;margin:9px 0}
+.story-content p{font-size:12px;color:var(--muted);line-height:1.85}
+.story-content a{display:inline-block;margin-top:14px;color:var(--gold2);font-size:11px;font-weight:800}
+.mango-band{position:relative;overflow:hidden;color:white;background:linear-gradient(90deg,rgba(13,39,27,.95),rgba(13,39,27,.72)),url("https://www.thedailystar.net/sites/default/files/styles/big_1/public/images/2022/06/18/mango1.jpg?h=e6065f0b") center/cover}
+.mango-band .section{padding:95px 0}
+.mango-content{max-width:750px}
+.mango-content h2{font-family:"Playfair Display",serif;font-weight:500;font-size:clamp(38px,5vw,58px)}
+.mango-content p{max-width:720px;color:rgba(255,255,255,.76);font-size:14px;line-height:2;margin-top:20px}
+.tag-list{display:flex;flex-wrap:wrap;gap:9px;margin-top:25px}
+.tag{border:1px solid rgba(255,255,255,.3);border-radius:99px;padding:8px 13px;color:#ffe3a0;font-size:11px}
+.gallery-toolbar{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:25px}
+.gallery-toolbar p{max-width:540px;color:var(--muted);font-size:13px}
+.gallery-grid{display:grid;grid-template-columns:1.2fr .8fr .8fr;grid-auto-rows:220px;gap:13px}
+.gallery-item{position:relative;overflow:hidden;border-radius:14px;background:#ddd;cursor:pointer}
+.gallery-item:first-child{grid-row:span 2}
+.gallery-item:nth-child(4){grid-column:span 2}
+.gallery-item img{transition:transform .7s,filter .5s}
+.gallery-item:hover img{transform:scale(1.07);filter:brightness(.78)}
+.gallery-caption{position:absolute;left:0;right:0;bottom:0;padding:35px 16px 14px;color:white;font-size:12px;font-weight:700;background:linear-gradient(transparent,rgba(0,0,0,.72))}
+.lightbox{display:none;position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.92);align-items:center;justify-content:center;padding:30px}
+.lightbox.open{display:flex}
+.lightbox img{width:auto;height:auto;max-width:min(100%,1100px);max-height:82vh;object-fit:contain}
+.lightbox button{position:absolute;top:20px;right:25px;border:0;background:none;color:white;font-size:35px;cursor:pointer}
+.gallery-credit{margin-top:16px;color:#8b958d;font-size:10px;line-height:1.7}
+.culture-panel{background:var(--forest2);color:white;border-radius:22px;padding:48px;display:grid;grid-template-columns:1fr .8fr;gap:35px;align-items:center}
+.culture-panel p{color:rgba(255,255,255,.72);font-size:13px;line-height:1.95;margin-top:16px}
+.culture-quote{font-family:"Playfair Display",serif;font-size:28px;color:var(--gold);font-style:italic;line-height:1.4}
+.association{background:#fff}
+.association-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.association-box{padding:32px;border:1px solid var(--line);border-radius:17px;background:var(--cream)}
+.association-box h3{font-family:"Playfair Display",serif;font-size:25px}
+.association-box p{margin-top:12px;color:var(--muted);font-size:13px;line-height:1.9}
+.association-box .btn-gold{margin-top:20px}
+.footer{padding:58px 0 22px;background:#0b2118;color:white}
+.footer-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:35px}
+.footer-title{font-size:12px;font-weight:800;letter-spacing:.1em}
+.footer-muted{margin-top:8px;color:rgba(255,255,255,.5);font-size:11px}
+.footer-desc{max-width:500px;margin-top:18px;color:rgba(255,255,255,.62);font-size:12px;line-height:1.9}
+.footer-links{display:flex;flex-wrap:wrap;gap:16px;margin-top:17px;font-size:11px;color:rgba(255,255,255,.72)}
+.footer-links a:hover{color:var(--gold)}
+.copyright{border-top:1px solid rgba(255,255,255,.12);margin-top:40px;padding-top:18px;text-align:center;color:rgba(255,255,255,.38);font-size:10px}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.show{opacity:1;transform:translateY(0)}
+.delay-1{transition-delay:.12s}.delay-2{transition-delay:.24s}.delay-3{transition-delay:.36s}
+@media(max-width:900px){.nav-links{gap:13px}.nav-links a{font-size:11px}.nav-cta{display:none}.hero-grid{gap:25px}.two-col{gap:35px}.culture-panel{padding:35px}}
+@media(max-width:700px){
+.container{width:calc(100% - 34px)}.nav{height:70px}.brand-name{font-size:10px}.brand-sub{font-size:8px}.menu-btn{display:block}
+.nav-links{display:none;position:absolute;top:70px;left:0;right:0;padding:20px 25px 25px;background:var(--forest);align-items:flex-start;flex-direction:column;gap:17px}
+.nav-links.open{display:flex}.hero{padding:125px 0 65px;min-height:auto}.hero-grid{grid-template-columns:1fr;gap:35px}
+h1{font-size:clamp(48px,13vw,68px)}.hero-copy{font-size:13px}.hero-feature{min-height:390px}.hero-photo{inset:0 8% 0 8%}.hero-stamp{left:0;bottom:5px}
+.section{padding:75px 0}.two-col,.association-grid{grid-template-columns:1fr;gap:28px}.photo-frame{height:310px}.fact-strip{grid-template-columns:repeat(3,1fr)}
+.story-grid{grid-template-columns:1fr;gap:15px}.story-image{height:220px}.gallery-toolbar{display:block}.gallery-grid{grid-template-columns:1fr 1fr;grid-auto-rows:165px;gap:9px}.gallery-item:first-child{grid-row:span 2}.gallery-item:nth-child(4){grid-column:span 2}
+.culture-panel{grid-template-columns:1fr;padding:28px}.culture-quote{font-size:24px}.footer-grid{grid-template-columns:1fr}.mango-band .section{padding:75px 0}
+}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition-duration:.01ms!important}}
+
+
+/* Expanded photo captions: visible context below each photograph */
+.gallery-caption{display:block!important;padding:16px 17px 18px!important;line-height:1.55}
+.gallery-caption strong{display:block;font-size:15px;color:#fff;margin-bottom:7px}
+.gallery-caption span{display:block;font-size:11px;line-height:1.7;color:rgba(255,255,255,.82);font-weight:400}
+.gallery-caption small{display:block;margin-top:9px;font-size:9px;letter-spacing:.03em;color:#f0cf83}
+.gallery-item img{transition:transform .65s ease,filter .4s ease}
+.gallery-item:hover img{transform:scale(1.045);filter:brightness(.82)}
+
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="#home"><span class="brand-mark">CN</span><span><span class="brand-name">CHAPAI NAWABGANJ</span><span class="brand-sub">STUDENT ASSOCIATION • JUST</span></span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li><li><a href="#district">Our District</a></li><li><a href="#heritage">Heritage</a></li><li><a href="#culture">Culture</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#association">Association</a></li>
+    </ul>
+    <a class="nav-cta" href="https://www.facebook.com/profile.php?id=61572570397343" target="_blank" rel="noopener">Visit Our Facebook ↗</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+ <div class="container hero-grid">
+  <div class="reveal show">
+   <p class="kicker">A district of heritage, harvest & heart</p>
+   <h1>Where Heritage<br>Meets <span class="serif">Horizon.</span></h1>
+   <p class="hero-copy">Welcome to Chapai Nawabganj — the north-western land of legendary mango orchards, the historic Gaur region, the flowing Mahananda and the vibrant voice of Gambhira. This is our home, our heritage and our identity. We are the students of Chapai Nawabganj at Jashore University of Science and Technology.</p>
+   <div class="hero-actions"><a class="btn-gold" href="#district">Discover Our District ↓</a><a class="btn-ghost" href="#association">Meet Our Community</a></div>
+   <p class="hero-note"><span>⌖</span> Rajshahi Division, north-western Bangladesh</p>
+  </div>
+  <div class="hero-feature reveal delay-2">
+   <div class="hero-photo"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Pathway_of_Mahananda_River.jpg" alt="Green riverbank landscape along the Mahananda River"></div>
+   <div class="hero-feature-label"><strong>Chapai Nawabganj</strong><span>OUR ROOTS • OUR PRIDE</span></div>
+   <div class="hero-stamp"><b>One District</b><small>Many stories. One identity.</small></div>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="district">
+ <div class="container two-col">
+  <div class="reveal">
+   <p class="label">Get to know our homeland</p>
+   <h2>A land shaped by rivers, history and the <span class="serif">mango season.</span></h2>
+   <p class="body-copy" style="margin-top:22px">At the western edge of Bangladesh's Rajshahi Division, Chapai Nawabganj carries a distinctive landscape and a rich local identity. The district is known for fertile agricultural land, mango cultivation, historic settlements connected with medieval Gaur, and the rivers that have shaped life across the region. Its five upazilas are Chapai Nawabganj Sadar, Shibganj, Gomostapur, Nachole and Bholahat.</p>
+   <p class="body-copy" style="margin-top:14px">From the busy mango markets of Kansat to the calm banks of the Mahananda, from centuries-old monuments to the lively performance tradition of Gambhira, our district brings together nature, enterprise and culture.</p>
+   <div class="fact-strip">
+    <div class="fact"><b>5</b><span>Upazilas</span></div><div class="fact"><b>1984</b><span>District established</span></div><div class="fact"><b>Gaur</b><span>Historic region</span></div>
+   </div>
+   
+  </div>
+  <figure class="photo-frame reveal delay-2"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Pathway_of_Mahananda_River.jpg" alt="Mahananda River flowing beside green fields"><figcaption class="photo-caption">The Mahananda — a living part of our landscape</figcaption></figure>
+ </div>
+</section>
+
+<section class="section section-paper" id="heritage">
+ <div class="container">
+  <div class="section-head reveal"><p class="label">Echoes of the past</p><h2>Walk through our <span class="serif">living history.</span></h2><p class="section-intro">The district preserves remarkable traces of Bengal's Sultanate and Mughal periods. These places are more than monuments — they are chapters in the story of this land.</p></div>
+  <div class="story-grid">
+   <article class="story-card reveal"><div class="story-image"><img src="https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-chapainawabganj/2024/12/8cf98728e68a414d839877d39e10ca59.jpg" alt="Historic Choto Sona Mosque complex"></div><div class="story-content"><small>Shibganj • Sultanate heritage</small><h3>Choto Sona Mosque</h3><p>One of the region's best-known historic monuments, associated with the late fifteenth and early sixteenth centuries. Its carefully crafted architecture reflects the artistic legacy of the Bengal Sultanate.</p><a href="https://www.chapainawabganj.gov.bd/en" target="_blank" rel="noopener">District information ↗</a></div></article>
+   <article class="story-card reveal delay-1"><div class="story-image"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/%E0%A6%A4%E0%A6%BE%E0%A6%B9%E0%A6%96%E0%A6%BE%E0%A6%A8%E0%A6%BE.jpg" alt="Tahkhana complex associated with Shah Shuja"></div><div class="story-content"><small>Firozpur • Mughal-era site</small><h3>Baroduari / Tahkhana Complex</h3><p>The Tahkhana complex is associated with Prince Shah Shuja and the historic landscape around the Sona Mosque area. It adds another layer to the district's architectural heritage.</p><a href="https://www.chapainawabganj.gov.bd/en" target="_blank" rel="noopener">Explore district heritage ↗</a></div></article>
+   <article class="story-card reveal delay-2"><div class="story-image"><img src="https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-chapainawabganj/2024/12/d2ea7b7bfa7b4e7e948b75b1942d7330.jpg" alt="Historic brick mosque architecture in Chapai Nawabganj"></div><div class="story-content"><small>Gaur region • Archaeological heritage</small><h3>Darasbari & the Gaur legacy</h3><p>The remains of Darasbari Mosque and madrasa speak to the importance of the wider Gaur region as a historic centre of learning, worship and architecture.</p><a href="https://www.chapainawabganj.gov.bd/en" target="_blank" rel="noopener">Read local history ↗</a></div></article>
+  </div>
+  <div class="story-grid" style="margin-top:20px">
+   <article class="story-card reveal"><div class="story-image"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/%E0%A6%A4%E0%A6%BE%E0%A6%B9%E0%A6%96%E0%A6%BE%E0%A6%A8%E0%A6%BE.jpg" alt="Tahkhana historical architecture"></div><div class="story-content"><small>Historic architecture</small><h3>Tahkhana</h3><p>A Mughal-period structure linked with Shah Shuja, set within a wider historic complex in the Sona Mosque area.</p></div></article>
+   <article class="story-card reveal delay-1"><div class="story-image"><img src="https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-chapainawabganj/2024/12/024415fece5d40b580af0afc28ee5675.jpg" alt="Decorative brick and stone details of a historic mosque"></div><div class="story-content"><small>Craft & architecture</small><h3>Terracotta & stonework</h3><p>Decorative brickwork, carved stone and patterned surfaces preserve the craftsmanship of earlier generations.</p></div></article>
+   <article class="story-card reveal delay-2"><div class="story-image"><img src="https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-chapainawabganj/2024/12/8cf98728e68a414d839877d39e10ca59.jpg" alt="Choto Sona Mosque garden and facade"></div><div class="story-content"><small>Remembering our heroes</small><h3>Bir Shreshtha Mohiuddin Jahangir</h3><p>Chapai Nawabganj is also connected with the memory of Bir Shreshtha Captain Mohiuddin Jahangir, a hero of the 1971 Liberation War.</p></div></article>
+  </div>
+ </div>
+</section>
+
+<section class="mango-band">
+ <div class="container section">
+  <div class="mango-content reveal">
+   <p class="kicker">The flavour of our identity</p>
+   <h2>Chapai Nawabganj — <span class="serif">the land of mangoes.</span></h2>
+   <p>When summer arrives, orchards turn green and golden, village roads fill with the fragrance of ripe fruit, and the famous Kansat market comes alive with growers, traders and buyers. Mango cultivation is not simply an agricultural activity here: it supports livelihoods, connects communities and carries the name of Chapai Nawabganj across Bangladesh.</p>
+   <p>Among the varieties associated with the district are Khirsapat (Himsagar), Langra, Fazli, Gopalbhog, Amrapali and Ashwina. The season, harvest calendar and availability vary by variety and year.</p>
+   <div class="tag-list"><span class="tag">Khirsapat</span><span class="tag">Langra</span><span class="tag">Fazli</span><span class="tag">Gopalbhog</span><span class="tag">Amrapali</span><span class="tag">Ashwina</span></div>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="culture">
+ <div class="container">
+  <div class="culture-panel reveal">
+   <div><p class="label" style="color:var(--gold)">The voice of our people</p><h2 style="color:white">Gambhira: culture with a <span class="serif">voice.</span></h2><p>Gambhira is a distinctive folk performance tradition centred around Chapai Nawabganj and the wider north-western region. Through rhythmic songs, humour, dialogue and the familiar characters of Nana and Nati, performers reflect on everyday life and social issues. It is entertainment, storytelling and community commentary woven together — a living expression of our cultural identity.</p></div>
+   <div class="culture-quote">“A stage where humour speaks, stories live, and a community finds its voice.”</div>
+  </div>
+  <div class="story-grid">
+   <article class="story-card reveal"><div class="story-image"><img src="https://cdn.banglatribune.net/contents/cache/images/640x0x1/uploads/media/2016/12/04/73506001836e0907d38c60f7e2207ffe-5843f3d3a9f1d.jpg" alt="Gambhira folk performers on stage"></div><div class="story-content"><small>Folk performance</small><h3>Nana–Nati tradition</h3><p>Gambhira performances often use the humorous exchange between Nana and Nati to discuss community concerns and social realities.</p></div></article>
+   <article class="story-card reveal delay-1"><div class="story-image"><img src="https://cdn.risingbd.com/media/imgAll/2023January/chapai-2301260325.jpg" alt="Gambhira performance in a local community"></div><div class="story-content"><small>Community & expression</small><h3>Stories for the people</h3><p>Local performers bring public issues to life through song, dialogue, rhythm and satire.</p></div></article>
+   <article class="story-card reveal delay-2"><div class="story-image"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Pathway_of_Mahananda_River.jpg" alt="Rural landscape of Chapai Nawabganj"></div><div class="story-content"><small>Land & livelihood</small><h3>Life beside the rivers</h3><p>River landscapes, fertile fields and rural communities are an important part of the district's character.</p></div></article>
+  </div>
+ </div>
+</section>
+
+<section class="section section-paper" id="gallery">
+ <div class="container">
+  <div class="gallery-toolbar reveal"><div><p class="label">A visual journey</p><h2>Postcards from <span class="serif">our home.</span></h2></div><p>Explore a few glimpses of the landscapes, monuments, markets and traditions that make Chapai Nawabganj special. Select any photograph to view it larger.</p></div>
+  <div class="gallery-grid">
+   <figure class="gallery-item reveal"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Pathway_of_Mahananda_River.jpg" alt="Mahananda River landscape near Chapai Nawabganj"><figcaption class="gallery-caption"><strong>The Mahananda River</strong><span>The river is part of the district's landscape and everyday life. Its banks, chars and nearby settlements create a distinctive riverside view.</span><small>Photo: Wikimedia Commons</small></figcaption></figure>
+   <figure class="gallery-item reveal delay-1"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/3/35/Choto_Sona_Mosque%2C_Chapai_Nawabganj%2C_Rajshahi_%281%29.jpg" alt="Choto Sona Mosque in Shibganj, Chapai Nawabganj"><figcaption class="gallery-caption"><strong>Choto Sona Mosque</strong><span>A celebrated Sultanate-era monument near the Bangladesh–India border, admired for its stonework, ornamentation and historic architecture.</span><small>Photo: Hasib Sarker / Wikimedia Commons · CC BY-SA 4.0</small></figcaption></figure>
+   <figure class="gallery-item reveal delay-2"><img loading="lazy" src="https://www.thedailystar.net/sites/default/files/styles/big_1/public/images/2022/06/18/mango1.jpg?h=e6065f0b" alt="Mango trading at Kansat market"><figcaption class="gallery-caption"><strong>Kansat Mango Market</strong><span>Kansat is one of the best-known mango trading centres in the region. During the harvest season, growers and traders bring the district's famous varieties to market.</span><small>Photo: The Daily Star</small></figcaption></figure>
+   <figure class="gallery-item reveal"><img loading="lazy" src="https://cdn.banglatribune.net/contents/cache/images/640x0x1/uploads/media/2016/12/04/73506001836e0907d38c60f7e2207ffe-5843f3d3a9f1d.jpg" alt="Gambhira folk performers on stage"><figcaption class="gallery-caption"><strong>Gambhira Folk Performance</strong><span>Through music, humour and the characters Nana and Nati, Gambhira presents local stories and comments on social issues.</span><small>Photo: Bangla Tribune</small></figcaption></figure>
+   <figure class="gallery-item reveal delay-1"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/3/3e/%E0%A6%A4%E0%A6%BE%E0%A6%B9%E0%A6%96%E0%A6%BE%E0%A6%A8%E0%A6%BE.jpg" alt="Tahkhana historic complex in Firozpur, near Choto Sona Mosque"><figcaption class="gallery-caption"><strong>Tahkhana Complex</strong><span>This historic complex is associated with the Mughal period and the landscape around Shah Niamatullah Wali's shrine in Firozpur.</span><small>Photo: Wikimedia Commons</small></figcaption></figure>
+  </div>
+  <p class="gallery-credit">These are online reference photographs, not photographs produced by the association. Please retain creator/source credits and check the original reuse terms before public or commercial reuse. The Choto Sona Mosque photograph is available under CC BY-SA 4.0. More verified free-to-reuse photographs can be selected from <a href="https://commons.wikimedia.org/wiki/Category:Chapai_Nawabganj_District" target="_blank" rel="noopener">Wikimedia Commons' Chapai Nawabganj collection</a>.</p>
+ </div>
+</section>
+
+<section class="section association" id="association">
+ <div class="container association-grid">
+  <div class="reveal"><p class="label">From our district to our campus</p><h2>One hometown.<br><span class="serif">One student family.</span></h2><p class="body-copy" style="margin-top:20px">The Chapai Nawabganj Student Association of Jashore University of Science and Technology brings together students who share a connection to our district. Alongside celebrating our roots, the association can serve as a platform for friendship, mutual support, cultural exchange, student welfare and collective achievement.</p></div>
+  <div class="association-box reveal delay-2"><h3>Stay connected with our association</h3><p>Follow the official Facebook page for association announcements, activities, member updates and event photographs. The committee and member directory will be added after we verify the latest official information.</p><a class="btn-gold" href="https://www.facebook.com/profile.php?id=61572570397343" target="_blank" rel="noopener">Visit Official Facebook Page ↗</a></div>
+ </div>
+</section>
+</main>
+
+<footer class="footer">
+ <div class="container">
+  <div class="footer-grid">
+   <div><p class="footer-title">CHAPAI NAWABGANJ STUDENT ASSOCIATION OF JUST</p><p class="footer-muted">Jashore University of Science and Technology • Bangladesh</p><p class="footer-desc">Celebrating the land we come from, preserving the stories that shape us, and building a connected student community wherever we go.</p></div>
+   <div><p class="label" style="color:var(--gold)">Explore & connect</p><div class="footer-links"><a href="#district">Our District</a><a href="#heritage">Heritage</a><a href="#culture">Culture</a><a href="#gallery">Gallery</a><a href="https://www.facebook.com/profile.php?id=61572570397343" target="_blank" rel="noopener">Facebook ↗</a></div></div>
+  </div>
+  <div class="copyright">© <span id="year"></span> Chapai Nawabganj Student Association of JUST. Built with pride for our home district.</div>
+ </div>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Gallery image viewer"><button id="closeLightbox" aria-label="Close image">×</button><img id="lightboxImage" src="" alt=""></div>
+
+<script>
+const menuBtn=document.getElementById('menuBtn'),navLinks=document.getElementById('navLinks');
+menuBtn.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuBtn.textContent=open?'×':'☰';menuBtn.setAttribute('aria-expanded',String(open));});
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navLinks.classList.remove('open');menuBtn.textContent='☰';menuBtn.setAttribute('aria-expanded','false');}));
+document.getElementById('year').textContent=new Date().getFullYear();
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('show');observer.unobserve(entry.target);}}),{threshold:.12});
+document.querySelectorAll('.reveal:not(.show)').forEach(el=>observer.observe(el));
+const lightbox=document.getElementById('lightbox'),lightboxImage=document.getElementById('lightboxImage');
+document.querySelectorAll('.gallery-item').forEach(item=>item.addEventListener('click',()=>{const img=item.querySelector('img');lightboxImage.src=img.src;lightboxImage.alt=img.alt;lightbox.classList.add('open');}));
+function closeBox(){lightbox.classList.remove('open');lightboxImage.src='';}
+document.getElementById('closeLightbox').addEventListener('click',closeBox);
+lightbox.addEventListener('click',e=>{if(e.target===lightbox)closeBox();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeBox();});
+</script>
+</body>
 </html>
