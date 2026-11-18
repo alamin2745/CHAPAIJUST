@@ -1,23 +1,35 @@
 
 [
   {
-    "image": "images/events/freshers-reception-1.jpg",
-    "title": "Freshers' Reception",
-    "titleBn": "নবীনবরণ অনুষ্ঠান",
-    "description": "A memorable gathering of our association members.",
-    "descriptionBn": "আমাদের সমিতির সদস্যদের নিয়ে একটি স্মরণীয় আয়োজন।",
-    "date": "November 2026",
-    "dateBn": "নভেম্বর ২০২৬",
+    "image": "images/events/chapai-utsob-1/chapaiutsob-1.jpg",
+    "title": "Chapai Utsob 1.0",
+    "titleBn": "চাঁপাই উৎসব ১.০",
+    "description": "Memorable moments from the first edition of Chapai Utsob.",
+    "descriptionBn": "চাঁপাই উৎসবের প্রথম আয়োজনের স্মরণীয় মুহূর্ত।",
     "credit": "Chapai Nawabganj Student Association of JUST"
   },
   {
-    "image": "images/events/freshers-reception-2.jpg",
-    "title": "Freshers' Reception",
-    "titleBn": "নবীনবরণ অনুষ্ঠান",
-    "description": "Beautiful moments from our Freshers' Reception.",
-    "descriptionBn": "আমাদের নবীনবরণ অনুষ্ঠানের কিছু সুন্দর মুহূর্ত।",
-    "date": "November 2026",
-    "dateBn": "নভেম্বর ২০২৬",
+    "image": "images/events/chapai-utsob-2/chapai-1.jpg",
+    "title": "Chapai Utsob 2.0",
+    "titleBn": "চাঁপাই উৎসব ২.০",
+    "description": "Highlights from the second edition of Chapai Utsob.",
+    "descriptionBn": "চাঁপাই উৎসবের দ্বিতীয় আয়োজনের কিছু মুহূর্ত।",
+    "credit": "Chapai Nawabganj Student Association of JUST"
+  },
+  {
+    "image": "images/events/chapai-utsob-3/freshers-reception-1.jpg",
+    "title": "Chapai Utsob 3.0",
+    "titleBn": "চাঁপাই উৎসব ৩.০",
+    "description": "Memories from the third edition of Chapai Utsob.",
+    "descriptionBn": "চাঁপাই উৎসবের তৃতীয় আয়োজনের স্মৃতি।",
+    "credit": "Chapai Nawabganj Student Association of JUST"
+  },
+  {
+    "image": "images/events/chapai-utsob-3/freshers-reception-2.jpg",
+    "title": "Chapai Utsob 3.0",
+    "titleBn": "চাঁপাই উৎসব ৩.০",
+    "description": "More memorable moments from Chapai Utsob 3.0.",
+    "descriptionBn": "চাঁপাই উৎসব ৩.০-এর আরও কিছু স্মরণীয় মুহূর্ত।",
     "credit": "Chapai Nawabganj Student Association of JUST"
   }
 ]
