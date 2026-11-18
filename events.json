@@ -1,7 +1,7 @@
 
 [
   {
-    "image": "images/events/your-photo-name.jpg",
+    "image": "images/events/freshers-reception-1.jpg",
     "title": "Freshers' Reception",
     "titleBn": "নবীনবরণ অনুষ্ঠান",
     "description": "A memorable gathering of our association members.",
@@ -9,6 +9,15 @@
     "date": "November 2026",
     "dateBn": "নভেম্বর ২০২৬",
     "credit": "Chapai Nawabganj Student Association of JUST"
+  },
+  {
+    "image": "images/events/freshers-reception-2.jpg",
+    "title": "Freshers' Reception",
+    "titleBn": "নবীনবরণ অনুষ্ঠান",
+    "description": "Beautiful moments from our Freshers' Reception.",
+    "descriptionBn": "আমাদের নবীনবরণ অনুষ্ঠানের কিছু সুন্দর মুহূর্ত।",
+    "date": "November 2026",
+    "dateBn": "নভেম্বর ২০২৬",
+    "credit": "Chapai Nawabganj Student Association of JUST"
   }
 ]
-
